@@ -8,6 +8,15 @@ const DownloadSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  /**
+   * NOTE ON GOOGLE DRIVE LINKS:
+   * Large APKs (>100MB) often trigger a "Virus Scan Warning" page in production.
+   * Format A (Direct): https://drive.google.com/uc?export=download&id=YOUR_ID
+   * Format B (Reliable): https://drive.google.com/file/d/YOUR_ID/view?usp=sharing
+   * * If Format A gives you a 403 error in production, use Format B.
+   */
+  const apkDownloadUrl = "https://drive.google.com/uc?export=download&id=1zentH0QSmMRC9HHoD3B44RrLttqA1--l";
+
   return (
     <section id="download" className="py-20 md:py-28 relative overflow-hidden">
       {/* Background gradient */}
@@ -66,11 +75,11 @@ const DownloadSection = () => {
           >
             <Button
               size="xl"
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-soft hover:shadow-glow"
+              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-soft hover:shadow-glow transition-all"
               asChild
             >
               <a 
-                href="https://drive.google.com/uc?export=download&id=1zentH0QSmMRC9HHoD3B44RrLttqA1--l" 
+                href={apkDownloadUrl}
                 target="_blank" 
                 rel="noopener noreferrer"
               >
@@ -84,10 +93,15 @@ const DownloadSection = () => {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex items-center gap-2 justify-center mt-6 text-primary-foreground/70"
+            className="flex flex-col items-center gap-2 justify-center mt-6 text-primary-foreground/70"
           >
-            <Smartphone className="w-4 h-4" />
-            <span className="text-sm">Currently available for Android</span>
+            <div className="flex items-center gap-2">
+              <Smartphone className="w-4 h-4" />
+              <span className="text-sm font-medium">Currently available for Android</span>
+            </div>
+            <p className="text-xs max-w-xs opacity-60">
+              Note: You may need to "Allow installation from unknown sources" in your phone settings.
+            </p>
           </motion.div>
         </motion.div>
       </div>
