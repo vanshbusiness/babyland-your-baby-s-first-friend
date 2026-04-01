@@ -9,7 +9,7 @@ const DownloadSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   /**
-   * NOTE ON GOOGLE DRIVE LINKS:
+   * NOTE ON GOOGLE DRIVE LINKSs:
    * Large APKs (>100MB) often trigger a "Virus Scan Warning" page in production.
    * Format A (Direct): https://drive.google.com/uc?export=download&id=YOUR_ID
    * Format B (Reliable): https://drive.google.com/file/d/YOUR_ID/view?usp=sharing
