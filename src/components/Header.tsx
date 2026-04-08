@@ -24,7 +24,12 @@ const Header = () => {
           <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
             How It Works
           </a>
-          <a href="#download" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
+          {/* Updated Download Link */}
+          <a 
+            href="/babyland_patient.apk" 
+            download="babyland_patient.apk"
+            className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+          >
             Download
           </a>
         </nav>
