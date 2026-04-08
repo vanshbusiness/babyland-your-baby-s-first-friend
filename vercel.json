@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/babyland_patient.apk",
+      "destination": "https://github.com/vanshbusiness/babyland-your-baby-s-first-friend/releases/download/app-release/app-release.3.apk",
+      "permanent": false
+    }
+  ]
+}
