@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
     // Add the proxy configuration here:
     proxy: {
       '/babyland_patient.apk': {
-        target: 'https://github.com/vanshbusiness/babyland-your-baby-s-first-friend/releases/download/newbabyapprelease/app-release.apk',
+        target: 'https://github.com/vanshbusiness/babyland-your-baby-s-first-friend/releases/download/23aprillatest/app-release.apk',
         changeOrigin: true,
         followRedirects: true,
         rewrite: () => '' 
