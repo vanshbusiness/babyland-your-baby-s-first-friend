@@ -9,7 +9,7 @@ const DownloadSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   // Direct GitHub Release link to bypass "Large File" warnings
-  const apkDownloadUrl = "https://github.com/vanshbusiness/babyland-your-baby-s-first-friend/releases/download/app-release/app-release.3.apk";
+  const apkDownloadUrl = "";
 
   return (
     <section id="download" className="py-20 md:py-28 relative overflow-hidden">
