@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Download, Smartphone } from "lucide-react";
+import { ClipboardList, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-mother-baby.png";
 
 const HeroSection = () => {
@@ -55,9 +55,9 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <Button variant="cta" size="xl" asChild>
-                <a href="#download">
-                  <Download className="w-5 h-5" />
-                  Download Babyland APK
+                <a href="#waitlist">
+                  <ClipboardList className="w-5 h-5" />
+                  Join the Waitlist
                 </a>
               </Button>
             </motion.div>
@@ -68,8 +68,8 @@ const HeroSection = () => {
               transition={{ delay: 0.7 }}
               className="flex items-center gap-2 justify-center lg:justify-start mt-4 text-muted-foreground"
             >
-              <Smartphone className="w-4 h-4" />
-              <span className="text-sm">Android supported • Safe & Secure</span>
+              <Sparkles className="w-4 h-4" />
+              <span className="text-sm">Early access • Launching soon</span>
             </motion.div>
           </motion.div>
           

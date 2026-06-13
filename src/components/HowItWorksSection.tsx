@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Download, User, Activity, Sparkles, TrendingUp } from "lucide-react";
+import { ClipboardList, User, Activity, Sparkles, TrendingUp } from "lucide-react";
 
 const steps = [
   {
-    icon: Download,
-    title: "Download the App",
-    description: "Get Babyland APK on your Android device",
+    icon: ClipboardList,
+    title: "Join the Waitlist",
+    description: "Sign up for early access to Babyland",
     color: "bg-blush-light",
   },
   {
