@@ -1,0 +1,47 @@
+export const FOOTER_LINKS = {
+  legal: [
+    { label: "Privacy Policy", path: "/privacy-policy" },
+    { label: "Terms", path: "/terms-and-conditions" },
+    { label: "Refund", path: "/refund-policy" },
+    { label: "Cancellation", path: "/refund-policy" },
+    { label: "Cookies", path: "/cookies" },
+    { label: "Disclaimer", path: "/disclaimer" },
+    { label: "Copyright", path: "/copyright" },
+    { label: "EULA", path: "/eula" },
+  ],
+  company: [
+    { label: "About", path: "/about" },
+    { label: "Contact", path: "/contact" },
+    { label: "Security", path: "/security" },
+  ],
+  safety: [
+    { label: "Data Deletion", path: "/data-deletion" },
+    { label: "Account Deletion", path: "/account-deletion" },
+    { label: "Community Guidelines", path: "/community-guidelines" },
+    { label: "Child Safety", path: "/child-safety" },
+    { label: "Accessibility", path: "/accessibility" },
+  ],
+} as const;
+
+export const LEGAL_ROUTES = [
+  { path: "/privacy-policy", lazy: () => import("@/pages/legal/PrivacyPolicy") },
+  { path: "/terms-and-conditions", lazy: () => import("@/pages/legal/TermsAndConditions") },
+  { path: "/refund-policy", lazy: () => import("@/pages/legal/RefundPolicy") },
+  { path: "/shipping-delivery", lazy: () => import("@/pages/legal/ShippingDelivery") },
+  { path: "/cookies", lazy: () => import("@/pages/legal/Cookies") },
+  { path: "/data-deletion", lazy: () => import("@/pages/legal/DataDeletion") },
+  { path: "/account-deletion", lazy: () => import("@/pages/AccountDeletion") },
+  { path: "/community-guidelines", lazy: () => import("@/pages/legal/CommunityGuidelines") },
+  { path: "/child-safety", lazy: () => import("@/pages/legal/ChildSafety") },
+  { path: "/acceptable-use", lazy: () => import("@/pages/legal/AcceptableUse") },
+  { path: "/disclaimer", lazy: () => import("@/pages/legal/Disclaimer") },
+  { path: "/intellectual-property", lazy: () => import("@/pages/legal/IntellectualProperty") },
+  { path: "/security", lazy: () => import("@/pages/legal/Security") },
+  { path: "/gdpr", lazy: () => import("@/pages/legal/Gdpr") },
+  { path: "/dpdp", lazy: () => import("@/pages/legal/Dpdp") },
+  { path: "/accessibility", lazy: () => import("@/pages/legal/Accessibility") },
+  { path: "/eula", lazy: () => import("@/pages/legal/Eula") },
+  { path: "/copyright", lazy: () => import("@/pages/legal/Copyright") },
+  { path: "/about", lazy: () => import("@/pages/About") },
+  { path: "/contact", lazy: () => import("@/pages/Contact") },
+] as const;
